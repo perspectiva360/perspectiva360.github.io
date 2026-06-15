@@ -1,0 +1,212 @@
+/* ===== Base ===== */
+body {
+    margin: 0;
+    background-color: #052c53;
+    font-family: 'Ethereal', sans-serif;
+    color: #ffffff;
+}
+
+/* ===== Botón volver ===== */
+.btn-volver {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    z-index: 30;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-volver:hover {
+    background: #90091d;
+    border-color: #90091d;
+}
+
+/* ===== Contenido ===== */
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 110px 6vw 80px;
+}
+
+/* ===== Título de categoría ===== */
+.categoria {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin: 64px 0 28px;
+}
+
+.categoria::before,
+.categoria::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.categoria span {
+    font-family: 'Peristiwa', cursive;
+    font-size: 2.8rem;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+/* ===== Galería en cuadrícula ===== */
+.caja {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    margin: 0;
+}
+
+.fotos {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.fotos img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+}
+
+.fotos img:hover {
+    transform: scale(1.06);
+}
+
+/* ===== Visor (lightbox) ===== */
+.ful-img {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(2, 18, 36, 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.ful-img img {
+    width: auto;
+    max-width: 88%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.cerrar {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 34px;
+    color: #ffffff;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s ease, transform 0.2s ease;
+    user-select: none;
+}
+
+.cerrar:hover {
+    color: #097188;
+    transform: scale(1.15);
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: none;
+    font-size: 30px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: #90091d;
+}
+
+.prev-btn { left: 28px; }
+.next-btn { right: 28px; }
+
+/* ===== Footer ===== */
+.footer {
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 22px 6vw;
+    border-top: 3px solid #90091d;
+}
+
+.redes {
+    display: flex;
+    gap: 14px;
+}
+
+.redes a {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #90091d;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.redes a:hover {
+    background: #962234;
+    transform: translateY(-3px);
+}
+
+.copyright {
+    color: #555555;
+    font-size: 13px;
+    margin: 0;
+}
+
+.pabajo {
+    font-family: 'Peristiwa', cursive;
+    font-size: 1.6rem;
+    color: #052c53;
+    margin: 0;
+}

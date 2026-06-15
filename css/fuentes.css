@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Ethereal';
+    src: url('../fonts/EtherealDemo-Light.otf') format('opentype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Peristiwa';
+    src: url('../fonts/Peristiwa.otf') format('opentype');
+    font-display: swap;
+}
