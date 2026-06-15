@@ -12,7 +12,7 @@ function openfulimg(index) {
     currentIndex = index;
     fulImg.src = images[index].src;
     fulimgBox.style.display = "flex";
-    document.body.style.overflow = "hidden"; // evita scroll de fondo
+    document.body.style.overflow = "hidden";
 }
 
 function closeimg() {
